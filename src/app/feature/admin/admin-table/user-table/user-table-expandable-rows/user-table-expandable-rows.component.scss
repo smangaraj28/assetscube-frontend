@@ -1,0 +1,42 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+.example-element-row {
+
+  &:not(.example-expanded-row):hover {
+    background: #DFEDD5;
+  }
+
+  &:not(.example-expanded-row):active {
+    background: #b7ef85;
+  }
+
+  td {
+    border-bottom-width: 0;
+  }
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+// Filter By Mat form size control
+.mat-form-field {
+  font-size: 14px;
+  flex-grow: 1;
+  margin-top: 8px;
+}
+// NO result in Table
+.no-results {
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  font-size: 14px;
+  font-style: italic;
+}

@@ -1,0 +1,26 @@
+<!--p>
+  login-usr-conf works!
+</p>
+
+<div *ngIf="(user$ | async) as match">
+    <p> {{match.email}} </p>
+
+  <button mat-raised-button  (click)="proceed(match)">Proceed with {{match.email}}</button>
+  <button mat-raised-button (click) = "changeuser()">Logout and Login as different user</button>
+</div-->
+
+
+<div style="margin: 10% 20%;" *ngIf="(user$ | async) as match" fxLayout="row wrap">
+    <div fxFlex="100%">
+        <b style="font-size: xx-large"> You are logging in as  {{match.email || match.uid}} </b>
+    </div>
+    <div fxFlex="100%" fxLayout="row wrap" style="margin-top: 4%">
+        <div fxFlex="73%">
+            <button mat-raised-button color="primary" (click)="proceed(match)">
+                Proceed with login as user {{match.email || match.uid}}</button>
+        </div>
+        <div fxFlex="27%">
+            <button mat-raised-button color="warn" (click)="changeUser()">Logout and Login as different user</button>
+        </div>
+    </div>
+</div>

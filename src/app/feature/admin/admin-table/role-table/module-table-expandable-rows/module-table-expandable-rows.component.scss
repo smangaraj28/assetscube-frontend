@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+.example-element-row {
+
+  &:not(.example-expanded-row):hover {
+    background: #DFEDD5;
+  }
+
+  &:not(.example-expanded-row):active {
+    background: #b7ef85;
+  }
+
+  td {
+    border-bottom-width: 0;
+  }
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+td.mat-cell:first-of-type {
+  width: 50%;
+}
