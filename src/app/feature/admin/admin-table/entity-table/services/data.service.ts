@@ -41,6 +41,7 @@ export class DataService {
     addIssue(issue: Entity): void {
         this.dialogData = issue;
         this.objectKeyToLowerCase(issue);
+        console.log(issue);
         this.httpClient.post(environment['url_' + 'admin_entity'] + '/' + 'entity', issue)
             .subscribe(successResponse => {
                     this.onAPICallSuccess(successResponse);
@@ -56,6 +57,7 @@ export class DataService {
     updateIssue(issue: Entity): void {
         this.dialogData = issue;
         this.objectKeyToLowerCase(issue);
+        console.log(issue);
         this.httpClient.put(environment['url_' + 'admin_entity'] + '/' + 'entity', issue)
             .subscribe(successResponse => {
                     this.onAPICallSuccess(successResponse);
